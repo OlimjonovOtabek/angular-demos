@@ -1,1 +1,11 @@
-{{ title() }}
+<div class="min-h-screen bg-slate-50 flex flex-col">
+  <app-navbar />
+
+  <main class="grow p-6">
+    <div class="max-w-7xl mx-auto">
+      <router-outlet />
+    </div>
+  </main>
+
+  <footer class="p-4 text-center text-slate-500 text-xs border-t">Angular {{ version }}</footer>
+</div>
