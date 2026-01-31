@@ -1,3 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+main {
+  view-transition-name: main-content;
+}
 
-@import "tailwindcss";
+@import 'tailwindcss';
