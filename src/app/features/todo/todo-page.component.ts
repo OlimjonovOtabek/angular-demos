@@ -16,7 +16,7 @@ import { FilterOption } from './types';
         <div class="flex flex-col gap-2 sm:flex-row">
           <input
             type="text"
-            class="h-10 flex-1 rounded-md border border-border bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground "
+            class="min-h-10 h-10 flex-1 rounded-md border border-border bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground"
             placeholder="Add a todo..."
             [value]="newTitle()"
             (input)="onTitleInput($event)"

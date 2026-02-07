@@ -7,7 +7,7 @@ import { ThemeToggleComponent } from '../../shared/components/theme-toggle/theme
   standalone: true,
   imports: [RouterLink, RouterLinkActive, ThemeToggleComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `<nav class="border-b border-border bg-card/95 text-foreground shadow-sm">
+  template: `<nav class="border-b border-border bg-card/95 text-foreground shadow-sm overflow-auto">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex h-16 items-center justify-between gap-4">
         <div class="flex items-center gap-8">
