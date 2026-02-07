@@ -1,0 +1,53 @@
+<div
+  class="fixed inset-0 z-1001 flex items-center justify-center p-4 transition-all duration-300 ease-out"
+  [class.invisible]="!isOpen()"
+  [class.opacity-0]="!isOpen()"
+  [class.visible]="isOpen()"
+  [class.opacity-100]="isOpen()"
+>
+  <!-- Backdrop -->
+  <div
+    class="absolute inset-0 bg-foreground/15 backdrop-blur-sm transition-opacity duration-300 dark:bg-background/75"
+    (click)="close()"
+  ></div>
+
+  <!-- Dialog Panel -->
+  <div
+    class="relative w-full max-w-lg scale-100 transform overflow-hidden rounded-2xl bg-card text-card-foreground shadow-2xl ring-1 ring-border transition-all duration-300"
+    [class.scale-95]="!isOpen()"
+    [class.opacity-0]="!isOpen()"
+    [class.scale-100]="isOpen()"
+    [class.opacity-100]="isOpen()"
+    [class.translate-y-4]="!isOpen()"
+    [class.translate-y-0]="isOpen()"
+  >
+    <!-- Header -->
+    <div class="flex items-center justify-between border-b border-border bg-muted/50 px-6 py-4">
+      <h3 class="text-lg font-semibold text-card-foreground">{{ title() }}</h3>
+      <button
+        (click)="close()"
+        class="rounded-full p-2 text-muted-foreground transition-all duration-200 hover:bg-muted hover:text-foreground"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 text-muted-foreground">
+      <ng-content></ng-content>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex justify-end gap-3 border-t border-border bg-muted/30 px-6 py-4">
+      <app-button variant="secondary" (click)="close()">Cancel</app-button>
+      <app-button (click)="onConfirm.emit(); close()">Save</app-button>
+    </div>
+  </div>
+</div>
