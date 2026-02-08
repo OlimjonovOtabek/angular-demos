@@ -1,8 +1,9 @@
 import { CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { parseNumber } from '../../shared/utils';
 import { CartStore } from './cart.store';
 import { DiscountType } from './types';
-import { parseDiscountType, parseNumberInput } from './utils';
+import { parseDiscountType } from './utils';
 
 @Component({
   selector: 'app-cart-page',
@@ -206,7 +207,7 @@ export class CartPageComponent {
 
   onQuantityInput(productId: string, event: Event): void {
     const inputElement = event.target as HTMLInputElement | null;
-    this.store.updateQuantity(productId, parseNumberInput(inputElement?.value ?? '0'));
+    this.store.updateQuantity(productId, parseNumber(inputElement?.value ?? null) ?? 0);
   }
 
   onDiscountTypeChange(event: Event): void {
@@ -235,7 +236,7 @@ export class CartPageComponent {
 
   onDiscountValueInput(event: Event): void {
     const inputElement = event.target as HTMLInputElement | null;
-    const value = parseNumberInput(inputElement?.value ?? '0');
+    const value = parseNumber(inputElement?.value ?? null) ?? 0;
     const current = this.store.discount();
 
     if (current.type === 'percentage' || current.type === 'fixed') {

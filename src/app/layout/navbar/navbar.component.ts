@@ -36,5 +36,6 @@ export class NavbarComponent {
   navLinks = [
     { path: '/cart', label: 'Cart' },
     { path: '/todo', label: 'Todo List' },
+    { path: '/search-filter', label: 'Search filter' },
   ];
 }
