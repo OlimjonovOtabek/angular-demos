@@ -38,11 +38,6 @@ export function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
 }
 
-export function parseNumberInput(value: string): number {
-  const parsed = Number(value);
-  return Number.isFinite(parsed) ? parsed : 0;
-}
-
 export function parseDiscountType(value: string): DiscountType {
   if (value === 'percentage' || value === 'fixed') {
     return value;
