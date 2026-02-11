@@ -34,6 +34,7 @@ import { ThemeToggleComponent } from '../../shared/components/theme-toggle/theme
 })
 export class NavbarComponent {
   navLinks = [
+    { path: '/tests', label: 'Tests' },
     { path: '/cart', label: 'Cart' },
     { path: '/todo', label: 'Todo List' },
     { path: '/search-filter', label: 'Search filter' },

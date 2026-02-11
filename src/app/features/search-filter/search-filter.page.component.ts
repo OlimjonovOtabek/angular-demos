@@ -1,13 +1,14 @@
 import { CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { InfoPanelComponent } from '../../shared/components/info-panel/info-panel.component';
 import { parseNumber } from '../../shared/utils';
 import { SearchFilterStore } from './search-filter.store';
 
 @Component({
   selector: 'app-search-filter-page',
   standalone: true,
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, InfoPanelComponent],
   template: `
     <section class="mx-auto w-full max-w-4xl space-y-4">
       <header class="space-y-1">
@@ -67,10 +68,10 @@ import { SearchFilterStore } from './search-filter.store';
       </div>
 
       @if (!store.filteredResults().length) {
-        <div
-          class="rounded-lg border border-dashed border-border bg-card shadow-sm p-8 text-center text-sm text-muted-foreground"
-        >
-          No items found.
+        <div>
+          <app-info-panel borderStyle="dashed" textPosition="center">
+            No items found.
+          </app-info-panel>
         </div>
       } @else {
         <ul class="space-y-2">
