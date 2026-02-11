@@ -5,6 +5,10 @@ import { TodoPageComponent } from './features/todo/todo-page.component';
 
 export const routes: Routes = [
   {
+    path: 'tests',
+    loadChildren: () => import('./features/tests/tests.routes').then((m) => m.TESTS_ROUTES),
+  },
+  {
     path: 'cart',
     component: CartPageComponent,
   },

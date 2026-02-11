@@ -1,5 +1,6 @@
 import { CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { InfoPanelComponent } from '../../shared/components/info-panel/info-panel.component';
 import { parseNumber } from '../../shared/utils';
 import { CartStore } from './cart.store';
 import { DiscountType } from './types';
@@ -8,7 +9,7 @@ import { parseDiscountType } from './utils';
 @Component({
   selector: 'app-cart-page',
   standalone: true,
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, InfoPanelComponent],
   template: `
     <section class="mx-auto w-full max-w-6xl space-y-6">
       <header class="space-y-1">
@@ -55,11 +56,9 @@ import { parseDiscountType } from './utils';
           <h3 class="text-base font-semibold text-card-foreground">Cart</h3>
 
           @if (store.cart().length === 0) {
-            <p
-              class="rounded-lg border border-dashed border-border p-6 text-center text-sm text-muted-foreground"
-            >
+            <app-info-panel borderStyle="dashed" textPosition="center">
               Cart is empty.
-            </p>
+            </app-info-panel>
           } @else {
             <ul class="space-y-2">
               @for (item of store.cart(); track item.productId) {
