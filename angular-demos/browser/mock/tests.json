@@ -1,0 +1,128 @@
+{
+  "tests": [
+    {
+      "id": "angular-basics",
+      "name": "Angular Asoslari",
+      "durationMinutes": 20,
+      "passPercent": 60,
+      "questions": [
+        {
+          "id": "1",
+          "text": "Qaysi buyruq yangi Angular komponent yaratadi?",
+          "type": "single",
+          "options": [
+            { "id": "1", "text": "ng create component" },
+            { "id": "2", "text": "ng generate component" },
+            { "id": "3", "text": "ng add component" },
+            { "id": "4", "text": "npm create component" }
+          ],
+          "correctOptionIds": ["2"]
+        },
+        {
+          "id": "2",
+          "text": "Quyidagilardan qaysilari Angular template control flow bloklari hisoblanadi?",
+          "type": "multiple",
+          "options": [
+            { "id": "1", "text": "@if" },
+            { "id": "2", "text": "@for" },
+            { "id": "3", "text": "@switch" },
+            { "id": "4", "text": "@map" }
+          ],
+          "correctOptionIds": ["1", "2", "3"]
+        },
+        {
+          "id": "3",
+          "text": "RouterModule va routing primitivlarini qaysi paket taqdim etadi?",
+          "type": "single",
+          "options": [
+            { "id": "1", "text": "@angular/router" },
+            { "id": "2", "text": "@angular/http" },
+            { "id": "3", "text": "@angular/forms" },
+            { "id": "4", "text": "@angular/core/router" }
+          ],
+          "correctOptionIds": ["1"]
+        },
+        {
+          "id": "4",
+          "text": "Quyidagilardan qaysilari Angular form API’lari hisoblanadi?",
+          "type": "multiple",
+          "options": [
+            { "id": "1", "text": "Reaktiv formalar (Reactive Forms)" },
+            { "id": "2", "text": "Shablon asosidagi formalar (Template-driven Forms)" },
+            { "id": "3", "text": "Signal formalar (Signal Forms)" },
+            { "id": "4", "text": "Klassik formalar (Classical Forms)" }
+          ],
+          "correctOptionIds": ["1", "2"]
+        },
+        {
+          "id": "5",
+          "text": "OnPush change detection nimani optimallashtiradi?",
+          "type": "single",
+          "options": [
+            { "id": "1", "text": "Faqat build tezligini" },
+            { "id": "2", "text": "Template sintaksisini" },
+            { "id": "3", "text": "Change detection tekshiruvlarini" },
+            { "id": "4", "text": "Routing guard’larni" }
+          ],
+          "correctOptionIds": ["3"]
+        }
+      ]
+    },
+    {
+      "id": "web-fundamentals",
+      "name": "Veb Asoslari",
+      "durationMinutes": 15,
+      "passPercent": 70,
+      "questions": [
+        {
+          "id": "1",
+          "text": "Asosiy sarlavha uchun qaysi HTML elementi ishlatiladi?",
+          "type": "single",
+          "options": [
+            { "id": "1", "text": "<h1>" },
+            { "id": "2", "text": "<head>" },
+            { "id": "3", "text": "<title>" },
+            { "id": "4", "text": "<header>" }
+          ],
+          "correctOptionIds": ["1"]
+        },
+        {
+          "id": "2",
+          "text": "Quyidagi CSS xususiyatlaridan qaysilari odatda layout (joylashuv) uchun ishlatiladi?",
+          "type": "multiple",
+          "options": [
+            { "id": "1", "text": "display" },
+            { "id": "2", "text": "position" },
+            { "id": "3", "text": "font-family" },
+            { "id": "4", "text": "grid-template-columns" }
+          ],
+          "correctOptionIds": ["1", "2", "4"]
+        },
+        {
+          "id": "3",
+          "text": "Qaysi status code 'Topilmadi (Not Found)' degani?",
+          "type": "single",
+          "options": [
+            { "id": "1", "text": "200" },
+            { "id": "2", "text": "301" },
+            { "id": "3", "text": "404" },
+            { "id": "4", "text": "500" }
+          ],
+          "correctOptionIds": ["3"]
+        },
+        {
+          "id": "4",
+          "text": "Quyidagilardan qaysilari JavaScript primitiv turlari?",
+          "type": "multiple",
+          "options": [
+            { "id": "1", "text": "string" },
+            { "id": "2", "text": "number" },
+            { "id": "3", "text": "Map" },
+            { "id": "4", "text": "boolean" }
+          ],
+          "correctOptionIds": ["1", "2", "4"]
+        }
+      ]
+    }
+  ]
+}
